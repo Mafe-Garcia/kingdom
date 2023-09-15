@@ -137,4 +137,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TopDownEngine/ThirdParty/MoreMountains/MMTools/Demos/MMSceneLoading/MMSceneLoadingDemoSceneB.unity
     guid: 352d34cac2435634fb99618d19a3929c
+  - enabled: 1
+    path: Assets/JuegoUPB/Scenes/Home.unity
+    guid: e019ec24883a49747972dc058c2f5a88
+  - enabled: 1
+    path: Assets/JuegoUPB/Scenes/Nivel 1.unity
+    guid: 06d3fc8e6e127a9489417a591cd5c3cf
+  - enabled: 1
+    path: Assets/JuegoUPB/Scenes/Nivel 2.unity
+    guid: 7d05156091aa17041a51147a9a3ef3f3
+  - enabled: 1
+    path: "Assets/JuegoUPB/Scenes/Cr\xE9ditos.unity"
+    guid: 783d97c0778ad5c449c26fec0c7f83aa
+  - enabled: 1
+    path: Assets/JuegoUPB/Scenes/Instrucciones.unity
+    guid: 654db443d55f5f340947d6958f8514de
+  - enabled: 1
+    path: Assets/JuegoUPB/Scenes/Gano.unity
+    guid: 0246add5ad12ead4b93324e3865b3460
+  - enabled: 1
+    path: Assets/JuegoUPB/Scenes/Perdio.unity
+    guid: e759ebe1723582449a881ced0e867059
   m_configObjects: {}
