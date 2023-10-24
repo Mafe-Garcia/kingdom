@@ -169,8 +169,16 @@ namespace MoreMountains.Tools
 
 		public Vector3 CurrentPositionRelative()
 		{
-			return _currentPoint.Current;
-		}
+            if (_currentPoint == null)
+            {
+                Debug.LogError("_currentPoint is null");
+                return Vector3.zero; // O devuelve un valor predeterminado apropiado
+            }
+            else
+            {
+                return _initialPosition + _currentPoint.Current;
+            }
+        }
 
 		/// <summary>
 		/// On update we keep moving along the path
