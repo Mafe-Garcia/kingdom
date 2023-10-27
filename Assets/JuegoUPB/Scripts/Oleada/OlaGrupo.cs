@@ -5,14 +5,14 @@ using MoreMountains.Tools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum EstadosGrupo
-{
-    SIN_EMPEZAR, EJECUCION, TERMINADO
+public enum EstadosGrupo{
+    EN_COLA,SIN_EMPEZAR,EJECUCION,TERMINADO
 }
 
 [Serializable]
 public class OlaGrupo : MonoBehaviour
 {
+    private Ola ola_actual;
     private EstadosGrupo estado;
     //private GameObject padre;
     [SerializeField]
@@ -23,36 +23,39 @@ public class OlaGrupo : MonoBehaviour
     private float tiempo_salida;
 
     public float Tiempo_salida { get => tiempo_salida; set => tiempo_salida = value; }
+    public Ola OlaActual { get => ola_actual; set => ola_actual = value; }
 
-    public void Start()
-    {
-        //Crear la ola, con la informaci髇 de OlaData
+    public void Start(){
+        Debug.Log(estado);
+    }
+
+    public void IniciarGrupo(){
+        //Crear la ola, con la informaci贸n de OlaData
         estado = EstadosGrupo.SIN_EMPEZAR;
     }
 
-    public void Update()
-    {
-        if (Time.timeSinceLevelLoad > Tiempo_salida && estado == EstadosGrupo.SIN_EMPEZAR)
+    public void Update(){
+        if(estado != EstadosGrupo.EN_COLA)
         {
-            EmpezarGrupo();
-            estado = EstadosGrupo.EJECUCION;
+            if(Time.timeSinceLevelLoad > Tiempo_salida && estado == EstadosGrupo.SIN_EMPEZAR)
+            {
+                EmpezarGrupo();
+                estado = EstadosGrupo.EJECUCION;
+            }
         }
     }
 
-    public void CrearGrupo(OlaData data)
-    {
+    public void CrearGrupo(OlaData data){
         enemigos = new List<Enemigo>();
         AgregarEnemigos(data);
     }
 
-    public void EmpezarGrupo()
-    {
+    public void EmpezarGrupo(){
         StartCoroutine(DespacharEnemigo(TIEMPO_SALIDA_ENEMIGO));
     }
 
     private IEnumerator DespacharEnemigo(float tiempo)
     {
-        Debug.Log("Despachar");
         yield return new WaitForSecondsRealtime(tiempo);
         ActivarEnemigo();
     }
@@ -62,7 +65,7 @@ public class OlaGrupo : MonoBehaviour
         Enemigo e;
         //AIBrain brain;
 
-        if (enemigo_actual < enemigos.Count)
+        if(enemigo_actual<enemigos.Count)
         {
             e = enemigos[enemigo_actual];//Oleadas.Instance.BuscarEnemigoDisponible();
             e.Obj.gameObject.SetActive(true);
@@ -71,7 +74,7 @@ public class OlaGrupo : MonoBehaviour
             {
                 brain.BrainActive = true;
             }*/
-            if (++enemigo_actual < enemigos.Count)
+            if(++enemigo_actual < enemigos.Count)
             {
                 StartCoroutine(DespacharEnemigo(TIEMPO_SALIDA_ENEMIGO));
             }
@@ -81,51 +84,54 @@ public class OlaGrupo : MonoBehaviour
                 //Despachar evento fin de ola, para que la oleado controle la 
                 //siguiente ola
                 estado = EstadosGrupo.TERMINADO;
+                ola_actual.DespacharGrupo();
+                //Ac谩 se indica que todos los enemigos de un grupo fueron
+                //despachados, se debe tener un contador en la ola
             }
-        }
+        }        
     }
 
-    public void AgregarEnemigos(OlaData e)
+     public void AgregarEnemigos(OlaData e)
     {
         GameObject obj = e.Prefab;//GameObject.Find(e.Tipo.ToString());
         Enemigo enemigo;
         //AIBrain brain;
         int cantidad = e.Cantidad;
 
-        if (obj != null)
+        if(obj!=null)
         {
-            for (int i = 0; i < cantidad; i++)
+            for(int i=0;i<cantidad;i++)
             {
-
+                
                 //obj.gameObject.SetActive(false);
                 GameObject newGameObject = (GameObject)Instantiate(obj);
                 obj.gameObject.SetActive(false);
-                newGameObject.transform.localScale = (newGameObject.transform.localScale * 0) + new Vector3(1, 1, 1);
-                newGameObject.transform.localPosition = (newGameObject.transform.localPosition) + new Vector3(0, i, 0);
+                newGameObject.transform.localScale = (newGameObject.transform.localScale * 0) + new Vector3(1,1,1);
+                newGameObject.transform.localPosition = (newGameObject.transform.localPosition)+new Vector3(0,i,0);
                 /*brain = newGameObject.GetComponent<AIBrain>();
                 if(brain!=null)
-                {   //No funciono, revisar ubicaci髇 de los scripts
+                {   //No funciono, revisar ubicaci贸n de los scripts
                     //Debug.Log("Desactivar cerebro");
                     brain.BrainActive = false;
                 }*/
                 enemigo = new Enemigo(newGameObject);
                 enemigos.Add(enemigo);
-                ConfigurarRuta(enemigo, e.Ruta);
+                ConfigurarRuta(enemigo,e.Ruta);
                 SceneManager.MoveGameObjectToScene(newGameObject, this.gameObject.scene);
-                newGameObject.transform.SetParent(this.gameObject.transform);
+                newGameObject.transform.SetParent(this.gameObject.transform);          
             }
         }
     }
 
-    //Crea la ola a partir de la informaci髇 de configuraci髇, nombre enemigo, 
-    public void ConfigurarRuta(Enemigo enemigo, MMPath ruta)
+    //Crea la ola a partir de la informaci贸n de configuraci贸n, nombre enemigo, 
+    public void ConfigurarRuta(Enemigo enemigo,MMPath ruta)
     {
         MMPath temp = enemigo.Obj.GetComponent<Ruta>();
-        if (temp != null)
+        if(temp!=null)
         {
             temp.ReferenceMMPath = ruta;
-            //temp.Initialization();
+            //temp.Initialization();//No es necesario inicializar una ruta asignada
         }
-
+        
     }
 }

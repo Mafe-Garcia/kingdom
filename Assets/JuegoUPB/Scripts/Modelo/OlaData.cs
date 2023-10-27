@@ -1,11 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Tools;
 using UnityEngine;
-
-
-
 
 [Serializable]
 public class OlaData
@@ -20,19 +16,16 @@ public class OlaData
     [SerializeField]
     private MMPath ruta;
 
-    public OlaData(TipoEnemigo tipo)
-    {
+    public OlaData(TipoEnemigo tipo){
         Tipo = tipo;
     }
 
-    public OlaData(TipoEnemigo tipo, int cantidad)
-    {
+    public OlaData(TipoEnemigo tipo,int cantidad){
         Tipo = tipo;
         Cantidad = cantidad;
     }
 
-    public OlaData(GameObject prefab, int cantidad)
-    {
+    public OlaData(GameObject prefab,int cantidad){
         Prefab = prefab;
         Cantidad = cantidad;
     }
