@@ -11,7 +11,12 @@ public class Oleadas : MonoBehaviour
     private GameObject contenedor_grupos;
     public static Oleadas Instance { get; private set; }
     public GameObject ContenedorGrupos { get => contenedor_grupos; set => contenedor_grupos = value; }
+    public global::System.Int32 Ola_actual { get => ola_actual; set => ola_actual = value; }
 
+    public int CantidadOlas()
+    {
+
+    }
 
     private void Awake() 
     { 
@@ -33,13 +38,14 @@ public class Oleadas : MonoBehaviour
 
     public void DespacharOla(){
         Ola ola;
-        if(ola_actual < olas.Count)
+        if(Ola_actual < olas.Count)
         {
-            ola = olas[ola_actual];
+            ola = olas[Ola_actual];
             ola.EmpezarOla();
             ola.OleadasNivel = this;
-            ola_actual++; //Acá se acualiza el contador de olas
-            Debug.Log("Ola "+ola_actual+"/"+olas.Count);
+            Ola_actual++; //Acá se acualiza el contador de olas
+            Debug.Log("Ola "+Ola_actual+"/"+olas.Count);
+            MMGameEvent.Trigger("NuevaOla");
         }
         else{
             //Se termina la partida indicar que gano y mostrar ventana fin de nivel
