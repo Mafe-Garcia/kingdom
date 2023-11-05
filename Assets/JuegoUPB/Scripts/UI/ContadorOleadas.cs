@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class ContadorOleadas : MonoBehaviour, MMEventListener<MMGameEvent>
 {
     [SerializeField]
@@ -12,15 +13,21 @@ public class ContadorOleadas : MonoBehaviour, MMEventListener<MMGameEvent>
     {
         if (eventType.EventName == "Nueva Ola")
         {
-            int ola_actual = ContadorOleadas.Instance.OlaActual;
-            int cantidad_olas=0;
+            int ola_actual = Oleadas.Instance.OlaActual;
+            int cantidad_olas = Oleadas.Instance.CantidadOlas();
             texto.text = "Ola " + ola_actual + "/" + cantidad_olas;
         }
     }
 
     // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        
+        this.OnMMEventStartListening<MMGameEvent>();
+    }
+    void OnDisable()
+    {
+        this.MMEventStopListening<MMGameEvent>();
     }
 }
+
+

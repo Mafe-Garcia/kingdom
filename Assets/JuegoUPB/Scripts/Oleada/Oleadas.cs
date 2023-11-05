@@ -9,13 +9,17 @@ public class Oleadas : MonoBehaviour
     private int ola_actual;
     [SerializeField]
     private GameObject contenedor_grupos;
+
     public static Oleadas Instance { get; private set; }
+
     public GameObject ContenedorGrupos { get => contenedor_grupos; set => contenedor_grupos = value; }
+
     public global::System.Int32 Ola_actual { get => ola_actual; set => ola_actual = value; }
+
 
     public int CantidadOlas()
     {
-
+        return olas.Count;
     }
 
     private void Awake() 
