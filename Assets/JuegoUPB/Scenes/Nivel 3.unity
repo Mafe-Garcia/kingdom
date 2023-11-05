@@ -15961,7 +15961,7 @@ MonoBehaviour:
   ModelRotationValueLeft: {x: 0, y: 180, z: 0}
   ModelRotationValueRight: {x: 0, y: 0, z: 0}
   ModelRotationSpeed: 0
-  InitialFacingDirection: 1
+  InitialFacingDirection: 3
   AbsoluteThresholdMovement: 0.5
   AbsoluteThresholdWeapon: 0.5
   CurrentFacingDirection: 1
