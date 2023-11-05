@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.Tools;
 
 public class Oleadas : MonoBehaviour
 {
@@ -9,12 +10,13 @@ public class Oleadas : MonoBehaviour
     private int ola_actual;
     [SerializeField]
     private GameObject contenedor_grupos;
+    private static Oleadas instance;
 
-    public static Oleadas Instance { get; private set; }
+    public static Oleadas Instance { get => instance; private set => instance = value; }
 
     public GameObject ContenedorGrupos { get => contenedor_grupos; set => contenedor_grupos = value; }
 
-    public global::System.Int32 Ola_actual { get => ola_actual; set => ola_actual = value; }
+    public int OlaActual { get => ola_actual; set => ola_actual = value; }
 
 
     public int CantidadOlas()
@@ -42,13 +44,13 @@ public class Oleadas : MonoBehaviour
 
     public void DespacharOla(){
         Ola ola;
-        if(Ola_actual < olas.Count)
+        if(OlaActual < olas.Count)
         {
-            ola = olas[Ola_actual];
+            ola = olas[OlaActual];
             ola.EmpezarOla();
             ola.OleadasNivel = this;
-            Ola_actual++; //Acá se acualiza el contador de olas
-            Debug.Log("Ola "+Ola_actual+"/"+olas.Count);
+            OlaActual++; //Acá se acualiza el contador de olas
+           // Debug.Log("Ola "+Ola_actual+"/"+olas.Count);
             MMGameEvent.Trigger("NuevaOla");
         }
         else{
