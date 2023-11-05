@@ -15522,7 +15522,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -15577,7 +15577,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: Wait
+    Actions:
+      array:
+      - {fileID: 454304507}
+    Transitions:
+      array:
+      - Decision: {fileID: 454304505}
+        TrueState: Shoot
+        FalseState: 
+  - StateName: Shoot
+    Actions:
+      array:
+      - {fileID: 454304506}
+    Transitions:
+      array:
+      - Decision: {fileID: 454304505}
+        TrueState: 
+        FalseState: Wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
