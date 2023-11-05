@@ -21946,7 +21946,7 @@ MonoBehaviour:
   - PathElementPosition: {x: 38.34638, y: -18.228704, z: 0}
     Delay: 0
   ReferenceMMPath: {fileID: 0}
-  AbsoluteReferencePath: 0
+  AbsoluteReferencePath: 1
   MinDistanceToGoal: 0.1
   LockHandlesOnXAxis: 0
   LockHandlesOnYAxis: 0
@@ -25656,7 +25656,7 @@ MonoBehaviour:
   - PathElementPosition: {x: 37.963654, y: -15.957, z: 0}
     Delay: 0
   ReferenceMMPath: {fileID: 0}
-  AbsoluteReferencePath: 0
+  AbsoluteReferencePath: 1
   MinDistanceToGoal: 0.1
   LockHandlesOnXAxis: 0
   LockHandlesOnYAxis: 0

@@ -10,10 +10,10 @@ public class ContadorOleadas : MonoBehaviour, MMEventListener<MMGameEvent>
     // Start is called before the first frame update
     public void OnMMEvent(MMGameEvent eventType)
     {
-        if (eventType.EventName = "Nueva Ola")
+        if (eventType.EventName == "Nueva Ola")
         {
             int ola_actual = ContadorOleadas.Instance.OlaActual;
-            int cantidad_olas;
+            int cantidad_olas=0;
             texto.text = "Ola " + ola_actual + "/" + cantidad_olas;
         }
     }
