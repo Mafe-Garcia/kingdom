@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using MoreMountains.TopDownEngine;
 using TMPro;
 using UnityEngine;
+using MoreMountains.Tools;
+
 
 public class ContadorVidas : MonoBehaviour
 {
@@ -18,6 +20,14 @@ public class ContadorVidas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        contador.SetText(GameManager.Instance.CurrentLives.ToString());
+        if (GameManager.Instance.CurrentLives > 0)
+        {
+            contador.SetText(GameManager.Instance.CurrentLives.ToString());
+        }
+        else
+        {
+            MMSceneLoadingManager.LoadScene("GameOver");
+        }
+       
     }
 }

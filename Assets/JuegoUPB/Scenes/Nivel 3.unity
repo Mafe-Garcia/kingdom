@@ -1797,6 +1797,7 @@ GameObject:
   - component: {fileID: 224760720}
   - component: {fileID: 224760722}
   - component: {fileID: 224760721}
+  - component: {fileID: 224760723}
   m_Layer: 0
   m_Name: Vida
   m_TagString: Untagged
@@ -1863,6 +1864,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224760719}
   m_CullTransparentMesh: 1
+--- !u!114 &224760723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224760719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e67178ee4220d45998a68939692391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contador: {fileID: 1243276252}
 --- !u!1001 &232223274
 PrefabInstance:
   m_ObjectHideFlags: 0
