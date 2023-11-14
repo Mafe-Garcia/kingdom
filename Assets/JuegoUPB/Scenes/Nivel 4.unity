@@ -1489,12 +1489,11 @@ MonoBehaviour:
   data:
   - tiempoSalida: 15
     cantidad: 3
-    prefab: {fileID: 535031368793099169, guid: 033779a74798aa044946d156641709ef, type: 3}
+    prefab: {fileID: 0}
     ruta: {fileID: 1053222579}
   - tiempoSalida: 17
     cantidad: 2
-    prefab: {fileID: 8436588666613494692, guid: a0c4b500f868b3d4eb7699479d26e2de,
-      type: 3}
+    prefab: {fileID: 0}
     ruta: {fileID: 129243915}
   tiempo_entre_olas: 15
   PuedeAgregarButton: 0
@@ -80762,12 +80761,11 @@ MonoBehaviour:
   data:
   - tiempoSalida: 30
     cantidad: 5
-    prefab: {fileID: 535031368793099169, guid: 033779a74798aa044946d156641709ef, type: 3}
+    prefab: {fileID: 0}
     ruta: {fileID: 1053222579}
   - tiempoSalida: 30
     cantidad: 2
-    prefab: {fileID: 8527711188052420204, guid: b1424a58fc9f6e9448459174e00cf02c,
-      type: 3}
+    prefab: {fileID: 1053222577}
     ruta: {fileID: 1053222579}
   tiempo_entre_olas: 0
   PuedeAgregarButton: 0
@@ -80824,7 +80822,8 @@ MonoBehaviour:
   data:
   - tiempoSalida: 0
     cantidad: 5
-    prefab: {fileID: 535031368793099169, guid: 033779a74798aa044946d156641709ef, type: 3}
+    prefab: {fileID: 8436588666613494692, guid: a0c4b500f868b3d4eb7699479d26e2de,
+      type: 3}
     ruta: {fileID: 1053222579}
   tiempo_entre_olas: 15
   PuedeAgregarButton: 0
