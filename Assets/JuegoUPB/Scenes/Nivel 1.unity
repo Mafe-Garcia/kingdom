@@ -916,7 +916,7 @@ MonoBehaviour:
     Delay: 0
   - PathElementPosition: {x: 54.948032, y: -15.68, z: 0}
     Delay: 0
-  - PathElementPosition: {x: 54.948032, y: -51.73815, z: 0}
+  - PathElementPosition: {x: 54.948032, y: -56, z: 0}
     Delay: 0
   ReferenceMMPath: {fileID: 0}
   AbsoluteReferencePath: 0
@@ -12625,7 +12625,7 @@ MonoBehaviour:
     Delay: 0
   - PathElementPosition: {x: 54.948032, y: -22.22166, z: 0}
     Delay: 0
-  - PathElementPosition: {x: 54.948032, y: -51.73815, z: 0}
+  - PathElementPosition: {x: 54.948032, y: -56, z: 0}
     Delay: 0
   ReferenceMMPath: {fileID: 0}
   AbsoluteReferencePath: 0
