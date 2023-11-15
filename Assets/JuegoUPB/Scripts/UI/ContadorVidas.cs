@@ -20,14 +20,16 @@ public class ContadorVidas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.CurrentLives > 0)
+
+        contador.SetText(GameManager.Instance.CurrentLives.ToString());
+        /*if (GameManager.Instance.CurrentLives > 0)
         {
             contador.SetText(GameManager.Instance.CurrentLives.ToString());
         }
         else
-        {
+        {            
             MMSceneLoadingManager.LoadScene("GameOver");
-        }
+        }*/
        
     }
 }
