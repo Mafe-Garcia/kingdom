@@ -60,8 +60,4 @@ public class Oleadas : MonoBehaviour
 
     }
 
-    /*public Enemigo BuscarEnemigoDisponible(TipoEnemigo tipo)
-    {
-        return null;
-    }*/
 }

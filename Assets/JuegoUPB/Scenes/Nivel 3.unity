@@ -29570,6 +29570,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 208810072}
     m_Modifications:
+    - target: {fileID: 5382978721828213585, guid: e31d9bc3cb3c90142a21fd697f9daedd,
+        type: 3}
+      propertyPath: m_text
+      value: "\xBFAhora que?"
+      objectReference: {fileID: 0}
     - target: {fileID: 5382978722194919097, guid: e31d9bc3cb3c90142a21fd697f9daedd,
         type: 3}
       propertyPath: m_Name
