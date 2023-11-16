@@ -17118,8 +17118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AutomaticallyUnparentOnAwake: 1
   TargetFrameRate: 300
-  MaximumLives: 0
-  CurrentLives: 0
+  MaximumLives: 10
+  CurrentLives: 10
   GameOverScene: 
   Points: 0
   PauseGameWhenInventoryOpens: 1
@@ -18189,7 +18189,7 @@ MonoBehaviour:
   - tiempoSalida: 10
     cantidad: 5
     prefab: {fileID: 535031368793099169, guid: 033779a74798aa044946d156641709ef, type: 3}
-    ruta: {fileID: 538716475578304633, guid: b1424a58fc9f6e9448459174e00cf02c, type: 3}
+    ruta: {fileID: 1383916539}
   - tiempoSalida: 5
     cantidad: 4
     prefab: {fileID: 8527711188052420204, guid: b1424a58fc9f6e9448459174e00cf02c,
@@ -18199,7 +18199,7 @@ MonoBehaviour:
     cantidad: 1
     prefab: {fileID: 8436588666613494692, guid: a0c4b500f868b3d4eb7699479d26e2de,
       type: 3}
-    ruta: {fileID: 538716475578304633, guid: b1424a58fc9f6e9448459174e00cf02c, type: 3}
+    ruta: {fileID: 1383916539}
   tiempo_entre_olas: 10
   PuedeAgregarButton: 0
 --- !u!1 &723442523
@@ -20098,7 +20098,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847678948}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -20333,18 +20333,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888726248}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5308967}
-  m_Father: {fileID: 208810072}
-  m_RootOrder: 11
+  m_Father: {fileID: 130884794}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1045, y: -449.7}
+  m_AnchoredPosition: {x: -37, y: -871.37537}
   m_SizeDelta: {x: 105.64, y: 116.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &888726250
@@ -22137,12 +22137,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   olas:
   - {fileID: 976318533}
-  - {fileID: 976318533}
-  - {fileID: 976318533}
-  - {fileID: 976318533}
-  - {fileID: 976318533}
-  - {fileID: 976318533}
-  - {fileID: 976318533}
+  - {fileID: 17752849}
+  - {fileID: 1043030980}
+  - {fileID: 1296987243}
+  - {fileID: 2130709976}
+  - {fileID: 722468480}
+  - {fileID: 723442525}
   contenedor_grupos: {fileID: 188176504}
 --- !u!4 &1039602725 stripped
 Transform:
@@ -23565,7 +23565,7 @@ MonoBehaviour:
   - tiempoSalida: 2
     cantidad: 2
     prefab: {fileID: 535031368793099169, guid: 033779a74798aa044946d156641709ef, type: 3}
-    ruta: {fileID: 538716475578304633, guid: b1424a58fc9f6e9448459174e00cf02c, type: 3}
+    ruta: {fileID: 1871132168}
   tiempo_entre_olas: 20
   PuedeAgregarButton: 0
 --- !u!4 &1298947523 stripped
@@ -25637,19 +25637,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477600638}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1576845797}
   - {fileID: 163011511}
-  m_Father: {fileID: 208810072}
-  m_RootOrder: 14
+  m_Father: {fileID: 130884794}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1109, y: -401}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1477600640
@@ -26483,18 +26483,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596514064}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1949173305}
-  m_Father: {fileID: 208810072}
-  m_RootOrder: 12
+  m_Father: {fileID: 130884794}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -907, y: -452.17}
+  m_AnchoredPosition: {x: 108, y: -873.84534}
   m_SizeDelta: {x: 107.74, y: 121.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1611048998 stripped
@@ -28848,7 +28848,7 @@ RectTransform:
   - {fileID: 1985449080}
   - {fileID: 1425620349}
   m_Father: {fileID: 208810072}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -30842,16 +30842,16 @@ MonoBehaviour:
     cantidad: 2
     prefab: {fileID: 8436588666613494692, guid: a0c4b500f868b3d4eb7699479d26e2de,
       type: 3}
-    ruta: {fileID: 538716475578304633, guid: b1424a58fc9f6e9448459174e00cf02c, type: 3}
+    ruta: {fileID: 1871132168}
   - tiempoSalida: 5
     cantidad: 4
     prefab: {fileID: 8527711188052420204, guid: b1424a58fc9f6e9448459174e00cf02c,
       type: 3}
-    ruta: {fileID: 538716475578304633, guid: b1424a58fc9f6e9448459174e00cf02c, type: 3}
+    ruta: {fileID: 1871132168}
   - tiempoSalida: 2
     cantidad: 1
     prefab: {fileID: 535031368793099169, guid: 033779a74798aa044946d156641709ef, type: 3}
-    ruta: {fileID: 538716475578304633, guid: b1424a58fc9f6e9448459174e00cf02c, type: 3}
+    ruta: {fileID: 1383916539}
   tiempo_entre_olas: 20
   PuedeAgregarButton: 0
 --- !u!4 &2131483204 stripped

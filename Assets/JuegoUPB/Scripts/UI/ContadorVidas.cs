@@ -21,15 +21,15 @@ public class ContadorVidas : MonoBehaviour
     void Update()
     {
 
-        contador.SetText(GameManager.Instance.CurrentLives.ToString());
-        /*if (GameManager.Instance.CurrentLives > 0)
+        
+        if (GameManager.Instance.CurrentLives > 0)
         {
             contador.SetText(GameManager.Instance.CurrentLives.ToString());
         }
         else
         {            
             MMSceneLoadingManager.LoadScene("GameOver");
-        }*/
+        }
        
     }
 }
