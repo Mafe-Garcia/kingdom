@@ -16,7 +16,6 @@ public class ContadorOleadas : MonoBehaviour, MMEventListener<MMGameEvent>
             int cantidad_olas = Oleadas.Instance.CantidadOlas();
             texto.text = "Ola " + ola_actual + "/" + cantidad_olas;
         }
-       
     }
     void OnEnable()
     {

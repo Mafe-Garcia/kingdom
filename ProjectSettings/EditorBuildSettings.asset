@@ -159,7 +159,7 @@ EditorBuildSettings:
     path: Assets/JuegoUPB/Scenes/Gano.unity
     guid: 0246add5ad12ead4b93324e3865b3460
   - enabled: 1
-    path: Assets/JuegoUPB/Scenes/Perdio.unity
+    path: Assets/JuegoUPB/Scenes/GameOver.unity
     guid: e759ebe1723582449a881ced0e867059
   - enabled: 1
     path: Assets/JuegoUPB/Scenes/GameOver.unity
