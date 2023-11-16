@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4291879051109731206}
   m_Layer: 13
   m_Name: rat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,8 +530,8 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 0
   Invulnerable: 0
-  InitialHealth: 5
-  MaximumHealth: 5
+  InitialHealth: 30
+  MaximumHealth: 30
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}

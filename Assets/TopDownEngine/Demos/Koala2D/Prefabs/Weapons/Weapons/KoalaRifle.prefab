@@ -5048,7 +5048,7 @@ GameObject:
   - component: {fileID: 114345180357598506}
   - component: {fileID: 114251315345146356}
   - component: {fileID: 51553726725684757}
-  - component: {fileID: 6467538386271051341}
+  - component: {fileID: -6345188645433489849}
   m_Layer: 0
   m_Name: KoalaRifle
   m_TagString: Untagged
@@ -5243,7 +5243,7 @@ MonoBehaviour:
     m_Bits: 8192
   ObstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   ScanRadius: 15
   LineOfFireBoxcastSize: {x: 0.1, y: 0.1}
   DurationBetweenScans: 1
@@ -5264,20 +5264,54 @@ MonoBehaviour:
   Target: {fileID: 0}
   DrawDebugRadius: 1
   OverlapMaximum: 10
---- !u!114 &6467538386271051341
+--- !u!114 &-6345188645433489849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490220044263310}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8b1174ff4d3dcb4da6a6d4e0ae5bb77, type: 3}
+  m_Script: {fileID: 11500000, guid: 76891b3b532f84acaaeed44c357bd00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayBeforeShootAfterAcquiringTarget: 0.1
-  OnlyAutoShootIfOwnerIsIdle: 0
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  Owner: {fileID: 0}
+  TriggerFilter: 195
+  MinDamageCaused: 0.5
+  MaxDamageCaused: 0.5
+  TypedDamages: []
+  DamageDirectionMode: 1
+  DamageCausedKnockbackType: 1
+  DamageCausedKnockbackDirection: 0
+  DamageCausedKnockbackForce: {x: 5, y: 5, z: 5}
+  InvincibilityDuration: 0.5
+  RepeatDamageOverTime: 0
+  AmountOfRepeats: 3
+  DurationBetweenRepeats: 1
+  DamageOverTimeInterruptible: 1
+  RepeatedDamageType: {fileID: 0}
+  DamageTakenEveryTime: 0
+  DamageTakenDamageable: 0
+  DamageTakenNonDamageable: 0
+  DamageTakenKnockbackType: 0
+  DamageTakenKnockbackForce: {x: 0, y: 0, z: 0}
+  DamageTakenInvincibilityDuration: 0.5
+  HitDamageableFeedback: {fileID: 0}
+  HitNonDamageableFeedback: {fileID: 0}
+  HitAnythingFeedback: {fileID: 0}
+  HitDamageableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  HitNonDamageableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  HitAnythingEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1806446063217534
 GameObject:
   m_ObjectHideFlags: 0

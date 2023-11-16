@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4395066079039785206}
   m_Layer: 13
   m_Name: snailWalk2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,8 +530,8 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 0
   Invulnerable: 0
-  InitialHealth: 10
-  MaximumHealth: 10
+  InitialHealth: 25
+  MaximumHealth: 25
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
